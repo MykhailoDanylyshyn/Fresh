@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Fresh.Application/Fresh.Application.csproj" />
+  <Project Path="Fresh.Domain/Fresh.Domain.csproj" />
+  <Project Path="Fresh.Infrastructure/Fresh.Infrastructure.csproj" />
+  <Project Path="Fresh.WebApi/Fresh.WebApi.csproj" />
+</Solution>
