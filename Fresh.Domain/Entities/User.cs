@@ -1,4 +1,6 @@
-﻿namespace Fresh.Domain.Entities
+﻿using Fresh.Domain.Enums;
+
+namespace Fresh.Domain.Entities
 {
     public class User
     {
