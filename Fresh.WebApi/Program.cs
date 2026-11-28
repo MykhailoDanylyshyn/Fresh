@@ -1,3 +1,9 @@
+using Fresh.Application.Interfaces;
+using Fresh.Infrastructure.EF;
+using Fresh.Infrastructure.Repositories;
+using Microsoft.EntityFrameworkCore;
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +11,16 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+
+// Налаштування підключення до бази даних.
+builder.Services.AddDbContext<FreshContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+// Реєстрація патерну Unit of Work.
+builder.Services.AddScoped<IUnitOfWork, EFUnitOfWork>();
+
 
 var app = builder.Build();
 
