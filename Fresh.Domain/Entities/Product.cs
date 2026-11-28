@@ -11,7 +11,7 @@
         public Brand? Brand { get; set; }
 
         public int ColorId { get; set; }
-        public Color? Color { get; set; }
+        public ColorProduct? Color { get; set; }
 
         public int CategoryId { get; set; }
         public Category? Category { get; set; }

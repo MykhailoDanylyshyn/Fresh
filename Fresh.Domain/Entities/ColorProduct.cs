@@ -1,8 +1,8 @@
 ﻿namespace Fresh.Domain.Entities
 {
-    public class Color
+    public class ColorProduct
     {
-        public int ColorId { get; set; }
+        public int ColorProductId { get; set; }
         public required string ColorName { get; set; }
 
         public ICollection<Product> Products { get; set; } = [];

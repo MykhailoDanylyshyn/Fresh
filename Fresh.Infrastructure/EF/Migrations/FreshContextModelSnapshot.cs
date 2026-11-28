@@ -80,19 +80,19 @@ namespace Fresh.Infrastructure.EF.Migrations
                     b.ToTable("CollectionProducts");
                 });
 
-            modelBuilder.Entity("Fresh.Domain.Entities.Color", b =>
+            modelBuilder.Entity("Fresh.Domain.Entities.ColorProduct", b =>
                 {
-                    b.Property<int>("ColorId")
+                    b.Property<int>("ColorProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColorId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ColorProductId"));
 
                     b.Property<string>("ColorName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ColorId");
+                    b.HasKey("ColorProductId");
 
                     b.ToTable("Colors");
                 });
@@ -524,7 +524,7 @@ namespace Fresh.Infrastructure.EF.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Fresh.Domain.Entities.Color", "Color")
+                    b.HasOne("Fresh.Domain.Entities.ColorProduct", "Color")
                         .WithMany("Products")
                         .HasForeignKey("ColorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -588,7 +588,7 @@ namespace Fresh.Infrastructure.EF.Migrations
                     b.Navigation("SizeOptions");
                 });
 
-            modelBuilder.Entity("Fresh.Domain.Entities.Color", b =>
+            modelBuilder.Entity("Fresh.Domain.Entities.ColorProduct", b =>
                 {
                     b.Navigation("Products");
                 });

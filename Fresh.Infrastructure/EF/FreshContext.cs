@@ -14,7 +14,7 @@ namespace Fresh.Infrastructure.EF
         public DbSet<Brand> Brands => Set<Brand>();
         public DbSet<Category> Categories => Set<Category>();
         public DbSet<Product> Products => Set<Product>();
-        public DbSet<Color> Colors => Set<Color>();
+        public DbSet<ColorProduct> Colors => Set<ColorProduct>();
         public DbSet<SizeOption> SizeOptions => Set<SizeOption>();
         public DbSet<ProductImage> ProductImages => Set<ProductImage>();
         public DbSet<ProductSize> ProductSizes => Set<ProductSize>();

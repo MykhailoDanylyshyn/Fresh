@@ -41,13 +41,13 @@ namespace Fresh.Infrastructure.EF.Migrations
                 name: "Colors",
                 columns: table => new
                 {
-                    ColorId = table.Column<int>(type: "int", nullable: false)
+                    ColorProductId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ColorName = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Colors", x => x.ColorId);
+                    table.PrimaryKey("PK_Colors", x => x.ColorProductId);
                 });
 
             migrationBuilder.CreateTable(
@@ -153,7 +153,7 @@ namespace Fresh.Infrastructure.EF.Migrations
                         name: "FK_Products_Colors_ColorId",
                         column: x => x.ColorId,
                         principalTable: "Colors",
-                        principalColumn: "ColorId",
+                        principalColumn: "ColorProductId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
