@@ -2,7 +2,7 @@
 
 public class SeasonalCollection
 {
-    public int CollectionId { get; set; }
+    public int SeasonalCollectionId { get; set; }
     public required string CollectionName { get; set; }
     public string? Description { get; set; }
     public string? VideoURL { get; set; }

@@ -2,7 +2,7 @@
 {
     public class SizeOption
     {
-        public int SizeId { get; set; }
+        public int SizeOptionId { get; set; }
         public required string SizeName { get; set; }
 
         public int CategoryId { get; set; }

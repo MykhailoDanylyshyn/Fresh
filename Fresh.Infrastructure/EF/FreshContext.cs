@@ -107,6 +107,11 @@ namespace Fresh.Infrastructure.EF
                 .ToTable(t => t.HasCheckConstraint(
                     "CK_OrderItem_Quantity",
                     "[Quantity] > 0"));
+
+            modelBuilder.Entity<CollectionProduct>()
+           .HasOne(cp => cp.SeasonalCollection)
+            .WithMany(sc => sc.CollectionProducts)
+            .HasForeignKey(cp => cp.CollectionId);
         }
 
     }
